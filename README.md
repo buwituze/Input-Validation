@@ -3,14 +3,14 @@
 A Flutter project that includes inputs validation.
 
 # How to Use
-## Application Setup
+### Application Setup
 
 - Clone the repository
 - Ensure you have Flutter installed on your system
 - Run flutter pub get to install dependencies
 - Run the app using flutter run or simply click the run button in android studio
 
-## Application Flow
+### Application Flow
 
 #### Starting the App
 
@@ -29,8 +29,8 @@ The form contains four input fields:
 ## Input Validation Rules
 Name Validation:
 
-dartCopy// Must start with capital letter and contain only letters and spaces
-RegExp(r'^[A-Z][a-zA-Z\s]*$')
+Must start with capital letter and contain only letters and spaces
+- RegExp(r'^[A-Z][a-zA-Z\s]*$')
 
 - Must start with a capital letter
 - Can only contain letters and spaces
@@ -39,8 +39,8 @@ RegExp(r'^[A-Z][a-zA-Z\s]*$')
 
 Email Validation:
 
-dartCopy// Basic email format validation
-RegExp(r'^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+')
+Basic email format validation
+- RegExp(r'^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+')
 
 - Must contain @ symbol
 - Must have valid domain format
@@ -48,8 +48,8 @@ RegExp(r'^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+')
 
 Phone Number Validation (Follows Rwandan numbers):
 
-dartCopy// Kenyan phone number format
-RegExp(r'^07[2389]\d{7}$')
+Kenyan phone number format
+- RegExp(r'^07[2389]\d{7}$')
 
 - Must be exactly 10 digits
 - Must start with '07'
