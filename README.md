@@ -2,15 +2,70 @@
 
 A Flutter project that includes inputs validation.
 
-## Getting Started
+# How to Use
+## Application Setup
 
-This project is a starting point for a Flutter application.
+- Clone the repository
+- Ensure you have Flutter installed on your system
+- Run flutter pub get to install dependencies
+- Run the app using flutter run or simply click the run button in android studio
 
-A few resources to get you started if this is your first Flutter project:
+## Application Flow
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Starting the App
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Launch the app to see the welcome screen
+- Click "Go to from" to proceed to the input form
+
+#### Form Input Fields
+
+The form contains four input fields:
+
+- Name
+- Address
+- Email
+- Phone Number
+
+## Input Validation Rules
+Name Validation:
+
+dartCopy// Must start with capital letter and contain only letters and spaces
+RegExp(r'^[A-Z][a-zA-Z\s]*$')
+
+- Must start with a capital letter
+- Can only contain letters and spaces
+- No special characters allowed
+- Minimum length of 2 characters
+
+Email Validation:
+
+dartCopy// Basic email format validation
+RegExp(r'^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+')
+
+- Must contain @ symbol
+- Must have valid domain format
+- Cannot be empty
+
+Phone Number Validation (Follows Rwandan numbers):
+
+dartCopy// Kenyan phone number format
+RegExp(r'^07[2389]\d{7}$')
+
+- Must be exactly 10 digits
+- Must start with '07'
+- Third digit must be 2, 3, 8, or 9
+
+
+
+Address Field:
+
+- Optional field with no validation
+
+Form Submission
+
+- All required fields must pass validation
+- Form shows error messages for invalid inputs
+- Successful submission:
+  - Shows green success message
+  - Automatically clears all fields
+  - Resets form state after successful submission
